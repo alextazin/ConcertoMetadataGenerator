@@ -1,0 +1,478 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#"
+     xml:base="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ConcertOntology="http://ece.neu.edu/ontologies/ConcertOlogy.owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:OBROntology="http://ece.neu.edu.crf/OBROntology.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl">
+        <owl:imports rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#AddCyclicPrefix_CPU -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#AddCyclicPrefix_CPU">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#CPUComponent"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ConcertOntology:activationCost>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</ConcertOntology:power>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#AddGuardTone_CPU -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#AddGuardTone_CPU">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#CPUComponent"/>
+        <ConcertOntology:realizes rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#SolverAddGuardTone_1"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ConcertOntology:activationCost>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</ConcertOntology:power>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#AddGuardTone_FPGA -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#AddGuardTone_FPGA">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#FPGAComponent"/>
+        <ConcertOntology:realizes rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#SolverAddGuardTone_1"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ConcertOntology:activationCost>
+        <ConcertOntology:height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</ConcertOntology:height>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</ConcertOntology:power>
+        <ConcertOntology:width rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ConcertOntology:width>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#AddPrePostambleAndSIFS_CPU -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#AddPrePostambleAndSIFS_CPU">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#CPUComponent"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ConcertOntology:activationCost>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</ConcertOntology:power>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#Adder1 -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#Adder1">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#ALUComponent"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ConcertOntology:activationCost>
+        <ConcertOntology:height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ConcertOntology:height>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</ConcertOntology:power>
+        <ConcertOntology:width rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ConcertOntology:width>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#Adder2 -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#Adder2">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#ALUComponent"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ConcertOntology:activationCost>
+        <ConcertOntology:height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</ConcertOntology:height>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</ConcertOntology:power>
+        <ConcertOntology:width rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ConcertOntology:width>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#Adder3 -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#Adder3">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#ALUComponent"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ConcertOntology:activationCost>
+        <ConcertOntology:height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ConcertOntology:height>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</ConcertOntology:power>
+        <ConcertOntology:width rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ConcertOntology:width>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#ChannelEqualizer_Fast -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#ChannelEqualizer_Fast">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverChannelEqualizer"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ConcertOntology:activationCost>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</ConcertOntology:power>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#ChannelEqualizer_Slow -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#ChannelEqualizer_Slow">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverChannelEqualizer"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ConcertOntology:activationCost>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</ConcertOntology:power>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#Deinterleave_CPU -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#Deinterleave_CPU">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#CPUComponent"/>
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverDeinterleave"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ConcertOntology:activationCost>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</ConcertOntology:power>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#FFT_Fast -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#FFT_Fast">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverFFT"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ConcertOntology:activationCost>
+        <ConcertOntology:height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</ConcertOntology:height>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</ConcertOntology:power>
+        <ConcertOntology:width rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ConcertOntology:width>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#FFT_Slow -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#FFT_Slow">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverFFT"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ConcertOntology:activationCost>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</ConcertOntology:power>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#FrequencyAdjust_Fast -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#FrequencyAdjust_Fast">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverFrequencyAdjust"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ConcertOntology:activationCost>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</ConcertOntology:power>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#FrequencyAdjust_Slow -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#FrequencyAdjust_Slow">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverFrequencyAdjust"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ConcertOntology:activationCost>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</ConcertOntology:power>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#IFFT_CPU -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#IFFT_CPU">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#CPUComponent"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ConcertOntology:activationCost>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</ConcertOntology:power>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#IFFT_FPGA -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#IFFT_FPGA">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#FPGAComponent"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ConcertOntology:activationCost>
+        <ConcertOntology:height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ConcertOntology:height>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.5</ConcertOntology:power>
+        <ConcertOntology:width rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ConcertOntology:width>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#InterleaveCPU_0 -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#InterleaveCPU_0">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#CPUComponent"/>
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverInterleave"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ConcertOntology:activationCost>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</ConcertOntology:power>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#InterleaveCPU_1 -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#InterleaveCPU_1">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#CPUComponent"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ConcertOntology:activationCost>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</ConcertOntology:power>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#LDPCDecoder_CPU -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#LDPCDecoder_CPU">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#CPUComponent"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ConcertOntology:activationCost>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</ConcertOntology:power>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#LDPCEncoderCPU_0 -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#LDPCEncoderCPU_0">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#CPUComponent"/>
+        <ConcertOntology:realizes rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#SolverLDPCEncoder_1"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ConcertOntology:activationCost>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</ConcertOntology:power>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#LDPCEncoderCPU_1 -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#LDPCEncoderCPU_1">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#CPUComponent"/>
+        <ConcertOntology:realizes rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#SolverLDPCEncoder_1"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ConcertOntology:activationCost>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</ConcertOntology:power>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#LLRSlicer_Fast -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#LLRSlicer_Fast">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverLLRSlicer"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ConcertOntology:activationCost>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</ConcertOntology:power>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#LLRSlicer_Slow -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#LLRSlicer_Slow">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverLLRSlicer"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ConcertOntology:activationCost>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</ConcertOntology:power>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#LanMapperCPU_0 -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#LanMapperCPU_0">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#CPUComponent"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ConcertOntology:activationCost>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</ConcertOntology:power>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#LanMapperCPU_1 -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#LanMapperCPU_1">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#CPUComponent"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ConcertOntology:activationCost>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.0</ConcertOntology:power>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#RemoveCyclicPrefix_Fast -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#RemoveCyclicPrefix_Fast">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverRemoveCyclicPrefix"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ConcertOntology:activationCost>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</ConcertOntology:power>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#RemoveCyclicPrefix_Slow -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#RemoveCyclicPrefix_Slow">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverRemoveCyclicPrefix"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ConcertOntology:activationCost>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</ConcertOntology:power>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#RemoveGuardTone_Fast -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#RemoveGuardTone_Fast">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverRemoveGuardTone"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ConcertOntology:activationCost>
+        <ConcertOntology:height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ConcertOntology:height>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.5</ConcertOntology:power>
+        <ConcertOntology:width rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ConcertOntology:width>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#RemoveGuardTone_Slow -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#RemoveGuardTone_Slow">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverRemoveGuardTone"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ConcertOntology:activationCost>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</ConcertOntology:power>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#RemovePilot_Fast -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#RemovePilot_Fast">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverRemovePilot"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ConcertOntology:activationCost>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</ConcertOntology:power>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#RemovePilot_Slow -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#RemovePilot_Slow">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverRemovePilot"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ConcertOntology:activationCost>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</ConcertOntology:power>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#SolverAddGuardTone_1 -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#SolverAddGuardTone_1">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverAddGuardTone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#SolverLDPCEncoder_1 -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#SolverLDPCEncoder_1">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverLDPCEncoder"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#TimingAcquisition_Fast -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#TimingAcquisition_Fast">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverTimingAcquisition"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ConcertOntology:activationCost>
+        <ConcertOntology:height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</ConcertOntology:height>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</ConcertOntology:power>
+        <ConcertOntology:width rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</ConcertOntology:width>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#TimingAcquisition_Slow -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#TimingAcquisition_Slow">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverTimingAcquisition"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ConcertOntology:activationCost>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</ConcertOntology:power>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#WaveformRX_finish -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#WaveformRX_finish">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverRXFinish"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ConcertOntology:activationCost>
+        <ConcertOntology:height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</ConcertOntology:height>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</ConcertOntology:power>
+        <ConcertOntology:width rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</ConcertOntology:width>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#WaveformTX_finish -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#WaveformTX_finish">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverTXFinish"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ConcertOntology:activationCost>
+        <ConcertOntology:height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</ConcertOntology:height>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</ConcertOntology:power>
+        <ConcertOntology:width rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</ConcertOntology:width>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#Waveform_prepare -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#Waveform_prepare">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverPrepare"/>
+        <ConcertOntology:activationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ConcertOntology:activationCost>
+        <ConcertOntology:height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</ConcertOntology:height>
+        <ConcertOntology:latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</ConcertOntology:latency>
+        <ConcertOntology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</ConcertOntology:power>
+        <ConcertOntology:width rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</ConcertOntology:width>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#mode1 -->
+
+    <owl:NamedIndividual rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy_ABox.owl#mode1">
+        <rdf:type rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#Mode1"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

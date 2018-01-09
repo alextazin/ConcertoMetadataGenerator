@@ -1,0 +1,1070 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://ece.neu.edu/ontologies/ConcertOlogy.owl#"
+     xml:base="http://ece.neu.edu/ontologies/ConcertOlogy.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:OBROntology="http://ece.neu.edu.crf/OBROntology.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl">
+        <owl:imports rdf:resource="http://ece.neu.edu.crf/OBROntology.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#hasHardwareDefinition -->
+
+    <owl:ObjectProperty rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#hasHardwareDefinition">
+        <rdfs:range rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#HardwareComponent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#isRealizedOn -->
+
+    <owl:ObjectProperty rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#isRealizedOn">
+        <owl:inverseOf rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#realizes"/>
+        <rdfs:domain rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#Component"/>
+        <rdfs:range rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#HardwareComponent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#realizes -->
+
+    <owl:ObjectProperty rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#realizes">
+        <rdfs:domain rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#HardwareComponent"/>
+        <rdfs:range rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#activationCost -->
+
+    <owl:DatatypeProperty rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#activationCost">
+        <rdfs:subPropertyOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#objectQuantityDatatype"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#HardwareComponent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#core -->
+
+    <owl:DatatypeProperty rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#core">
+        <rdfs:subPropertyOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#objectQuantityDatatype"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#HardwareComponent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#height -->
+
+    <owl:DatatypeProperty rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#height">
+        <rdfs:subPropertyOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#objectQuantityDatatype"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#HardwareComponent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#latency -->
+
+    <owl:DatatypeProperty rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#latency">
+        <rdfs:subPropertyOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#objectQuantityDatatype"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#HardwareComponent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#power -->
+
+    <owl:DatatypeProperty rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#power">
+        <rdfs:subPropertyOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#objectQuantityDatatype"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#HardwareComponent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#width -->
+
+    <owl:DatatypeProperty rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#width">
+        <rdfs:subPropertyOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#objectQuantityDatatype"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#HardwareComponent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#ALUComponent -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#ALUComponent">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#HardwareComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#BasicComponentParameter -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#BasicComponentParameter">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#ComponentParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#BasicVectorComplexFloat -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#BasicVectorComplexFloat">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#ConduitComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#BasicVectorInt -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#BasicVectorInt">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#ConduitComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#BasicVectorVectorComplexFloat -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#BasicVectorVectorComplexFloat">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#ConduitComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#BasicVectorVectorInt -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#BasicVectorVectorInt">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#ConduitComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#BooleanArrayInputPort -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#BooleanArrayInputPort">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#InputPort"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValueArray"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#BooleanValueArray"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValueArray"/>
+                <owl:allValuesFrom rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#BooleanValueArray"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#BooleanArrayOutputPort -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#BooleanArrayOutputPort">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#OutputPort"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValueArray"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#BooleanValueArray"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValueArray"/>
+                <owl:allValuesFrom rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#BooleanValueArray"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#BooleanSingleInputPort -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#BooleanSingleInputPort">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#InputPort"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValue"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#BooleanValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#BooleanValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#BooleanSingleOutputPort -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#BooleanSingleOutputPort">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#OutputPort"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValue"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#BooleanValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#BooleanValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#CPUComponent -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#CPUComponent">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#HardwareComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#ComplexArrayInputPort -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#ComplexArrayInputPort">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#InputPort"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValueArray"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#ComplexValueArray"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValueArray"/>
+                <owl:allValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#ComplexValueArray"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#ComplexArrayOfArrayInputPort -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#ComplexArrayOfArrayInputPort">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#InputPort"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValueArray"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#ComplexValueArrayOfArray"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValueArray"/>
+                <owl:allValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#ComplexValueArrayOfArray"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#ComplexArrayOfArrayOutputPort -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#ComplexArrayOfArrayOutputPort">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#OutputPort"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValueArray"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#ComplexValueArrayOfArray"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValueArray"/>
+                <owl:allValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#ComplexValueArrayOfArray"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#ComplexArrayOutputPort -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#ComplexArrayOutputPort">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#OutputPort"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValueArray"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#ComplexValueArray"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValueArray"/>
+                <owl:allValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#ComplexValueArray"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#ComplexValueArray -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#ComplexValueArray">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ece.neu.edu.crf/OBROntology.owl#ValueArray"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#isSequenceOf"/>
+                        <owl:someValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#ComplexValueArrayElement"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#isSequenceOf"/>
+                        <owl:allValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#ComplexValueArrayElement"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#ComplexValueArrayElement -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#ComplexValueArrayElement">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ece.neu.edu.crf/OBROntology.owl#ValueArrayElement"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValue"/>
+                        <owl:someValuesFrom rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#ComplexValue"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValue"/>
+                        <owl:allValuesFrom rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#ComplexValue"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#ComplexValueArrayOfArray -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#ComplexValueArrayOfArray">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ece.neu.edu.crf/OBROntology.owl#ValueArray"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#isSequenceOf"/>
+                        <owl:someValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#ComplexValueArrayOfArrayElement"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#isSequenceOf"/>
+                        <owl:allValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#ComplexValueArrayOfArrayElement"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#ComplexValueArrayOfArrayElement -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#ComplexValueArrayOfArrayElement">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#ValueArrayElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasIndex"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#ConduitComponent -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#ConduitComponent">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#FFT -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#FFT">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#BasicComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#FPGAComponent -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#FPGAComponent">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#HardwareComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#FloatArrayInputPort -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#FloatArrayInputPort">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#InputPort"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValueArray"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#FloatValueArray"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValueArray"/>
+                <owl:allValuesFrom rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#FloatValueArray"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#FloatArrayOutputPort -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#FloatArrayOutputPort">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#OutputPort"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValueArray"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#FloatValueArray"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValueArray"/>
+                <owl:allValuesFrom rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#FloatValueArray"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#FloatSingleInputPort -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#FloatSingleInputPort">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#InputPort"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValue"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#FloatValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#FloatValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#FloatSingleOutputPort -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#FloatSingleOutputPort">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#OutputPort"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValue"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#FloatValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#FloatValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#HardwareComponent -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#HardwareComponent">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#HardwareRealization -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#HardwareRealization">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#Realization"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#hasHardwareDefinition"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#HardwareComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#IntegerArrayInputPort -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#IntegerArrayInputPort">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#InputPort"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValueArray"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#IntegerValueArray"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValueArray"/>
+                <owl:allValuesFrom rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#IntegerValueArray"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#IntegerArrayOfArrayInputPort -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#IntegerArrayOfArrayInputPort">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#InputPort"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValueArray"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#IntegerValueArrayOfArray"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValueArray"/>
+                <owl:allValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#IntegerValueArrayOfArray"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#IntegerArrayOfArrayOutputPort -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#IntegerArrayOfArrayOutputPort">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#OutputPort"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValueArray"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#IntegerValueArrayOfArray"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValueArray"/>
+                <owl:allValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#ComplexValueArrayOfArray"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#IntegerArrayOutputPort -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#IntegerArrayOutputPort">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#OutputPort"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValueArray"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#IntegerValueArray"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasValueArray"/>
+                <owl:allValuesFrom rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#IntegerValueArray"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#IntegerValueArrayOfArray -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#IntegerValueArrayOfArray">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ece.neu.edu.crf/OBROntology.owl#ValueArray"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#isSequenceOf"/>
+                        <owl:someValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#IntegerValueArrayOfArrayElement"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#isSequenceOf"/>
+                        <owl:allValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#IntegerValueArrayOfArrayElement"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#IntegerValueArrayOfArrayElement -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#IntegerValueArrayOfArrayElement">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#ValueArrayElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasIndex"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#Jamming -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#Jamming">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#BasicComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#Magnitude -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#Magnitude">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#BasicComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#Mode -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#Mode">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#CompositeComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#Mode1 -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#Mode1">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#Mode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#Mode1FSM -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#Mode1FSM">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#FiniteStateMachine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#Mode1SM -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#Mode1SM">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#StateMachineComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#Mode2 -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#Mode2">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#Mode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#Mode2FSM -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#Mode2FSM">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#FiniteStateMachine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#Mode2SM -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#Mode2SM">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#StateMachineComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverAddCyclicPrefix -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverAddCyclicPrefix">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#BasicComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasComponentParameter"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#BasicComponentParameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverAddGuardTone -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverAddGuardTone">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#BasicComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasComponentParameter"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#BasicComponentParameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverAddPrePostambleAndSIFS -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverAddPrePostambleAndSIFS">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#BasicComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasComponentParameter"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#BasicComponentParameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverChannelEqualizer -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverChannelEqualizer">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#BasicComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasComponentParameter"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#BasicComponentParameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverDeinterleave -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverDeinterleave">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#BasicComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasComponentParameter"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#BasicComponentParameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverFFT -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverFFT">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#BasicComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasComponentParameter"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#BasicComponentParameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverFrequencyAdjust -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverFrequencyAdjust">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#BasicComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasComponentParameter"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#BasicComponentParameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverIFFT -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverIFFT">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#BasicComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasComponentParameter"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#BasicComponentParameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverInterleave -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverInterleave">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#BasicComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasComponentParameter"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#BasicComponentParameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverLDPCDecoder -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverLDPCDecoder">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#BasicComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasComponentParameter"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#BasicComponentParameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverLDPCEncoder -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverLDPCEncoder">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#BasicComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasComponentParameter"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#BasicComponentParameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#isRealizedOn"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#HardwareComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasInputPort"/>
+                <owl:allValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#IntegerArrayInputPort"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasOutputPort"/>
+                <owl:allValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#IntegerArrayOfArrayOutputPort"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverLLRSlicer -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverLLRSlicer">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#BasicComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasComponentParameter"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#BasicComponentParameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverLanMapper -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverLanMapper">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#BasicComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasComponentParameter"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#BasicComponentParameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverPrepare -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverPrepare">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#BasicComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasComponentParameter"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#BasicComponentParameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverRXFinish -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverRXFinish">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#BasicComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasComponentParameter"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#BasicComponentParameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverRemoveCyclicPrefix -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverRemoveCyclicPrefix">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#BasicComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasComponentParameter"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#BasicComponentParameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverRemoveGuardTone -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverRemoveGuardTone">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#BasicComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasComponentParameter"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#BasicComponentParameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverRemovePilot -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverRemovePilot">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#BasicComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasComponentParameter"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#BasicComponentParameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverTXFinish -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverTXFinish">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#BasicComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasComponentParameter"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#BasicComponentParameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverTimingAcquisition -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SolverTimingAcquisition">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#BasicComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#hasComponentParameter"/>
+                <owl:someValuesFrom rdf:resource="http://ece.neu.edu/ontologies/ConcertOlogy.owl#BasicComponentParameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#SpectrumSensing -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#SpectrumSensing">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#CompositeComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ece.neu.edu/ontologies/ConcertOlogy.owl#Threshold -->
+
+    <owl:Class rdf:about="http://ece.neu.edu/ontologies/ConcertOlogy.owl#Threshold">
+        <rdfs:subClassOf rdf:resource="http://ece.neu.edu.crf/OBROntology.owl#BasicComponent"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
